@@ -8,3 +8,19 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
+:root {
+    --beige-1: #D3A372;
+    --beige-2: #ECDAB6;
+    --beige-3: #F1EBE2;
+
+    --bordo-1: #230E09;
+    --bordo-2:  #602938;
+
+    --green-1: #2F2F22;
+
+    --blue-1: #4481CD;
+    --blue-2: #CDDCE3;
+    
+    --highlight: #FF6A56;
+}

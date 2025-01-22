@@ -16,6 +16,7 @@ const SEO = ({ title, description, children }) => {
       <meta name="robots" content="index, follow" />
       <meta name="language" content="es" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
       {children}
     </>
