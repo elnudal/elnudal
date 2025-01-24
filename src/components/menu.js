@@ -28,12 +28,12 @@ const Menu = () => {
                     <Link
                         to={item.path}
                         style={{
-                        textDecoration: "none",
-                        color: currentPath === item.path ? "#FF4500" : "#000",
-                        fontWeight: currentPath === item.path ? "bold" : "normal",
+                            textDecoration: "none",
+                            color: currentPath === item.path ? "rgb(47, 47, 34)" : "rgba(47, 47, 34,.8)",
+                            fontWeight: currentPath === item.path ? "bold" : "normal",
                         }}
                     >
-                        {item.name}
+                        <aside style={{ display: currentPath === item.path ? "initial" : "none" }} /> {item.name}
                     </Link>
                 </li>
             ))}
