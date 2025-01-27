@@ -10,6 +10,7 @@
     flex-direction: column;
     gap: 12px;
     padding: 36px 48px;
+    list-style-type: none;
 }
 
 #brand nav ul li {
@@ -33,7 +34,7 @@
     padding: 36px 5%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 980px) {
     #brand nav {
         position: initial;
         height: auto;
