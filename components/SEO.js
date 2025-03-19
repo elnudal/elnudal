@@ -23,17 +23,17 @@ class SEOComponent extends HTMLElement {
       this.updateMetaTag('viewport', 'width=device-width, initial-scale=1.0');
 
       // Agregar Open Graph Tags
-      this.updateMetaTag('og:title', title, 'property');
-      this.updateMetaTag('og:description', description, 'property');
-      this.updateMetaTag('og:image', image, 'property');
-      this.updateMetaTag('og:url', url, 'property');
-      this.updateMetaTag('og:type', 'website', 'property');
+      this.createMetaTag('og:title', title, 'property');
+      this.createMetaTag('og:description', description, 'property');
+      this.createMetaTag('og:image', image, 'property');
+      this.createMetaTag('og:url', url, 'property');
+      this.createMetaTag('og:type', 'website', 'property');
 
       // Agregar Twitter Card Tags
-      this.updateMetaTag('twitter:card', 'summary_large_image', 'name');
-      this.updateMetaTag('twitter:title', title, 'name');
-      this.updateMetaTag('twitter:description', description, 'name');
-      this.updateMetaTag('twitter:image', image, 'name');
+      this.createMetaTag('twitter:card', 'summary_large_image', 'name');
+      this.createMetaTag('twitter:title', title, 'name');
+      this.createMetaTag('twitter:description', description, 'name');
+      this.createMetaTag('twitter:image', image, 'name');
 
       // Agregar scripts adicionales si existen
       const scripts = this.getAttribute('scripts');
@@ -42,25 +42,18 @@ class SEOComponent extends HTMLElement {
       }
   }
 
-  updateMetaTag(name, content, attributeType = 'name') {
+  createMetaTag(name, content, attributeType = 'name') {
       let meta = document.querySelector(`meta[${attributeType}="${name}"]`);
       if (!meta) {
           meta = document.createElement('meta');
-          meta[attributeType] = name;
+          meta.setAttribute(attributeType, name);
           document.head.appendChild(meta);
       }
-      meta.content = content;
+      meta.setAttribute('content', content);
   }
 
-  updateLinkTag(rel, href, type) {
-      let link = document.querySelector(`link[rel="${rel}"]`);
-      if (!link) {
-          link = document.createElement('link');
-          link.rel = rel;
-          link.href = href;
-          if (type) link.type = type;
-          document.head.appendChild(link);
-      }
+  updateMetaTag(name, content, attributeType = 'name') {
+      this.createMetaTag(name, content, attributeType);
   }
 
   addScript(scripts) {
