@@ -1,6 +1,6 @@
 #linktree {
     min-height: 100vh;
-    background-color: var(--beige-2);
+    background-color: var(--beige-3);
 }
 
 #linktree .links, #linktree main {
@@ -67,7 +67,7 @@
 }
 
 #linktree .footer-link span { position: relative; width: fit-content; }
-#linktree .footer-link span::after {
+/*#linktree .footer-link span::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -75,7 +75,7 @@
     bottom: 0;
     left: 0;
     background-color: white;
-}
+}*/
 
 @media (max-width: 768px) {
     #linktree .subtitle {
