@@ -1,0 +1,35 @@
+[
+  {
+    "id": "MLA111111111",
+    "title": "Auriculares inalámbricos Bluetooth 5.3 con estuche de carga",
+    "price": 42999,
+    "currency": "ARS",
+    "available_quantity": 12,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_placeholder-headphones.webp",
+    "permalink": "https://articulo.mercadolibre.com.ar/MLA-111111111-auriculares-_JM",
+    "condition": "new",
+    "free_shipping": true
+  },
+  {
+    "id": "MLA222222222",
+    "title": "Teclado mecánico retroiluminado switch red - Español",
+    "price": 68900,
+    "currency": "ARS",
+    "available_quantity": 5,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_placeholder-keyboard.webp",
+    "permalink": "https://articulo.mercadolibre.com.ar/MLA-222222222-teclado-_JM",
+    "condition": "new",
+    "free_shipping": true
+  },
+  {
+    "id": "MLA333333333",
+    "title": "Mouse ergonómico recargable 2.4G silencioso",
+    "price": 24500,
+    "currency": "ARS",
+    "available_quantity": 0,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_placeholder-mouse.webp",
+    "permalink": "https://articulo.mercadolibre.com.ar/MLA-333333333-mouse-_JM",
+    "condition": "new",
+    "free_shipping": false
+  }
+]

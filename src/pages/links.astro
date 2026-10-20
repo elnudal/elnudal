@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Logo from '../assets/LogoElNudal.svg';
+---
+
+<Layout
+  title="El Nudal · Links"
+  description="El Nudal Macramé · Decoración para el hogar"
+>
+  <div class="relative min-h-screen bg-beige-2/5">
+    <div class="texture"></div>
+
+    <main class="mx-auto flex max-w-[700px] flex-col items-center gap-12 px-5 py-24">
+      <img
+        src={Logo.src}
+        alt="El Nudal Macrame y Decoracion Fina"
+        class="w-12"
+      />
+      <p class="-mt-3 text-center text-[12px] font-semibold uppercase tracking-[1px] text-beige-1 md:text-[10px]">
+        El Nudal Macrame · Decoración para el hogar
+      </p>
+
+      <section class="flex w-full flex-col items-center gap-[18px]">
+        <a href="https://elnudalmacrame.com" target="_blank" rel="noreferrer" class="min-w-full">
+          <button class="flex h-16 w-full items-center justify-start gap-3 bg-beige-1 px-6 text-lg text-white rounded-[500px] hover:bg-beige-3 hover:text-beige-1 transition-colors cursor-pointer">
+            <i class="ph ph-shopping-cart-simple"></i> Tienda online
+          </button>
+        </a>
+
+        <a
+          href="https://instagram.com/elnudal"
+          target="_blank"
+          rel="noreferrer"
+          class="min-w-full"
+        >
+          <button class="flex h-16 w-full items-center justify-start gap-3 bg-beige-1 px-6 text-lg text-white rounded-[500px] hover:bg-beige-3 hover:text-beige-1 transition-colors cursor-pointer">
+            <i class="ph ph-instagram-logo"></i> Instagram
+          </button>
+        </a>
+      </section>
+
+      <a
+        href="https://wa.me/541172377939"
+        target="_blank"
+        rel="noreferrer"
+        class="flex items-center justify-center gap-3 text-lg text-beige-1"
+      >
+        <span class="relative w-fit">Ó contactanos por What's App</span>
+        <i class="ph ph-whatsapp-logo"></i>
+      </a>
+    </main>
+  </div>
+</Layout>

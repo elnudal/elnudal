@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { getProducts } from '../lib/mercadolibre.js';
+
+import Logo from '../assets/elnudal.svg';
+
+const products = await getProducts();
+---
+
+<Layout>
+  <header class="sticky top-0 z-10 border-b border-line/60 bg-surface/70 backdrop-blur-md backdrop-saturate-150">
+    <div class="wrap flex h-16 items-center justify-between">
+      <a href="/" class="no-underline">
+        <img src={Logo.src} alt="El Nudal Macramé" class="h-5 max-md:h-4" />
+      </a>
+      <nav class="flex gap-6 max-md:gap-4">
+        <a href="#catalogo" class="text-[0.95rem] font-medium text-ink-soft no-underline hover:text-ink">
+          Catálogo
+        </a>
+        <a href="#como-comprar" class="text-[0.95rem] font-medium text-ink-soft no-underline hover:text-ink">
+          Cómo comprar
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-[clamp(3rem,9vw,6rem)] pb-[clamp(2rem,5vw,3.5rem)]">
+      <div class="wrap">
+        <h1 class="max-w-[18ch] text-[clamp(2.6rem,6vw,4.2rem)]">
+          Piezas únicas y naturales, tejidas a mano
+        </h1>
+        <p class="mt-5 max-w-[48ch] text-xl text-ink-soft">
+          Decoraciones para el hogar, accesorios y regalos, elaborados con técnicas de macramé y materiales de calidad.
+        </p>
+        <div class="mt-6 flex items-center gap-3 text-[0.95rem] text-ink-soft/75">
+          <span>Elaboración artesanal</span>
+          <span aria-hidden="true">·</span>
+          <span>Envíos a todo Argentina</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalogo" class="pb-[clamp(3rem,7vw,5rem)]">
+      <div class="wrap">
+        <div class="grid gap-[clamp(1rem,2.5vw,1.8rem)] [grid-template-columns:repeat(auto-fill,minmax(230px,1fr))]">
+          {products.map((product) => <ProductCard product={product} />)}
+        </div>
+      </div>
+    </section>
+
+    <section id="como-comprar" class="border-t border-line bg-beige-3/50 py-[clamp(3rem,7vw,5rem)]">
+      <div class="wrap">
+        <h2 class="mb-[clamp(2rem,3vw,3rem)] text-[2.2rem]">Cómo comprar</h2>
+        <ol class="m-0 grid list-none gap-[1.4rem] p-0 [grid-template-columns:repeat(auto-fit,minmax(240px,1fr))]">
+          <li class="flex items-start gap-[0.9rem] text-xl text-ink-soft">
+            <span class="grid size-[2.1rem] shrink-0 place-items-center rounded-full bg-beige-2/25 font-display font-bold text-beige-1">1</span>
+            Explorá el catálogo y encontrá lo que buscás.
+          </li>
+          <li class="flex items-start gap-[0.9rem] text-xl text-ink-soft">
+            <span class="grid size-[2.1rem] shrink-0 place-items-center rounded-full bg-beige-2/25 font-display font-bold text-beige-1">2</span>
+            <span>Tocá <em class="font-semibold not-italic text-ink">Comprar en MercadoLibre</em> en el producto.</span>
+          </li>
+          <li class="flex items-start gap-[0.9rem] text-xl text-ink-soft">
+            <span class="grid size-[2.1rem] shrink-0 place-items-center rounded-full bg-beige-2/25 font-display font-bold text-beige-1">3</span>
+            Completás la compra en MercadoLibre, con pago y envío protegidos.
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line py-8 text-[0.9rem] text-ink-soft">
+    <div class="wrap">
+      <p>© {new Date().getFullYear()} El Nudal Macramé · Argentina</p>
+    </div>
+  </footer>
+</Layout>
